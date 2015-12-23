@@ -1,0 +1,99 @@
+Techniques
+===========
+Arrays: 
+ 1. more than one pass: take sum or cum sum on first pass
+ 2. practice 2d matrix...
+ 3. walk thru array once, use 2 pointer to look left and right
+ 4. for "symetric" patterns like balance point consider both even and odd array size
+ 
+ Substrings:
+ 
+ 
+
+ 
+Array programming test......
+http://hr.gs/arraytest0627
+
+https://drive.google.com/file/d/0B9K8vLEbKstlZG5YRWxOcnI2NHc/view
+
+
+Hi,
+
+It was SO nice to have you all in our first programming interview workshop. As mentioned in my earlier email, I am hereby following up with 
+
+1) Practice test
+
+2)Information about the advanced workshop (part-2)
+
+3) Supplementary material
+
+Also feel free to ask for clarifications about any questions/algorithms at our Facebook page. I also post questions regularly to the page, so by liking the page, these questions will be a part of your Facebook feed.
+Regards,
+Jay
+https://www.facebook.com/programminginterviewprep
+
+Practice Test : 
+
+It is important to not let go the momentum you have gained. Here is a practice test on the topics we have covered so far.
+ http://hr.gs/practicetest0702
+
+I would love to discuss hints, suggestions and more with you. If you are stuck, please reach out for hints :)
+ 
+
+Advanced Programming Workshop : 
+
+The first workshop helped us gain momentum on interview preparation, and master a lot of programming 
+interview related techniques on fundamental data structures. It is now time to learn more advanced topics that are frequently tested in programming interviews, but rarely used in professional software engineering.
+
+The following are some of the topics the advanced workshop will focus on :
+Recursion
+Dynamic Programming
+Graphs 
+Tries
+Design Questions
+
+Some popularly asked questions on these topics : 
+
+Given a string like BedBathBeyond and a dictionary, check if it is a concatenation by valid english words.
+
+Given an array of Integers, find the longest increasing sub-sequence
+{1,6,2,3,4, 2,5}.
+The longest increasing sequence is 1,2,3,4,5.
+
+Date:
+We are planning to conduct our advanced programming workshop on July 11th. 
+
+Cost:
+As a token of appreciatio n for attending and making the previous workshop a success, the fee for the advanced workshop is discounted to 300$.
+
+Supplementary material :
+
+(I know the list is intimidating, but you don't need to have watched all of this to attend the workshop. Just skim through whatever you can)
+
+Hash Tables:
+https://www.youtube.com/watch? v=_2u5ioxv4Io
+https://www.youtube.com/watch? v=w080uZVw9M4
+https://www.youtube.com/watch? v=0Yor2eyR2U4
+
+Recursion:
+http://introcs.cs.princeton. edu/java/23recursion/
+
+
+Dynamic Programming 
+https://class.coursera.org/ algo2-003/lecture/83
+https://class.coursera.org/ algo2-003/lecture/85
+https://class.coursera.org/ algo2-003/lecture/87
+https://class.coursera.org/ algo2-003/lecture/89
+https://class.coursera.org/ algo2-003/lecture/91
+http://ocw.mit.edu/courses/ electrical-engineering-and- computer-science/6-006- introduction-to-algorithms- fall-2011/lecture-videos/ lecture-19-dynamic- programming-i-fibonacci- shortest-paths/
+
+Graphs:
+
+https://www.youtube.com/watch? v=aEenseBOvO4
+https://www.youtube.com/watch? v=8U7Md-rhyws
+
+Graph extra:
+https://www.youtube.com/watch? v=d7ppdCT9hLY
+https://www.youtube.com/watch? v=FQi7XbR01t8
+Heaps:
+https://www.youtube.com/watch?v=U_TfcSpQmNc

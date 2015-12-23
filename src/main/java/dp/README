@@ -1,0 +1,63 @@
+
+
+concepts: 
+i think one reason why learning DP is my perumations skills are weak.
+also my ability to make recusion call tree is weak.
+Also I dont know how to work well with PowerSets.(defn all subsets of a set)
+which is 2^N 
+
+Cache is used to cache reoccur subproblems, but also used to retrieve the 
+actual question in the second pass.
+
+try to draw the recursion tree.  
+
+recall the substructures of ChildSteps, ... of all of these
+
+when we setup 2d array Trick is to alloc extra row and col... dont know why
+
+
+1) no dynamic constraints
+1a)
+String permutation, 'abc' is exhaustive. There is no guiding constraint.
+We accept all candidates. Note that this particular problem uses "trick"
+of in place array swaps to do the permutation... and basecase printing, 
+all in place.  You could do same problem with other structures, as per
+count BT.
+
+1b) ChildSteps
+CTCI child steps is exhaustive, and recursion tree is, we have 3 each time. 
+Time complexity is thus 3 is the base^T  (why isnt it base^log(T) isnt tree height logT????
+We always accept candidate.
+
+
+2) dynamic constraints
+
+2a) count nbrWays to make change for Target
+
+
+NbrWays binary tree is exhaustive but similar in sense that we have R and L we hold
+R constant against nbrWays Left (and then the reverse)
+
+NbrWays to make change is exhaustive but we have a constraint that Target
+needs to be their sum THUS Target changes with each decision. The decision can be greedy
+(usually the recursive top down soln) or iterative (bottom up).
+When we candidate and acceptedCandidate, we are reducing the TARGET and since its number of ways,
+we need to SUM the solution WITH AND WITHOUT the acceptedCandidate.
+So the SET SIZE is changing each time. 
+
+2b) list all sets for making change
+
+
+2c) Min set size for making change
+
+
+2c)
+01 Knapsack
+at each iteration we have a newTarget and a new set [sameTarget/dontTakeItem, reducedTarget/acceptN]
+with further constraint that we only want min.
+
+
+3)  LIS  longest increasing subsequence
+Similarly time complexity is 2^N 
+Here the candidate set is fixed; ie you have {1,5,10,25} and only one of each whereas in Coins
+you have anynumber of each of the denom set [1,5,10,25].
