@@ -1,4 +1,4 @@
-package org.skup.array;
+package array;
 
 import org.junit.Assert;
 
