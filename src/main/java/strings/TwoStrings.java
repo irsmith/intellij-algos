@@ -56,7 +56,7 @@ public class TwoStrings {
 
 	}
 
-	static class IgnoreHashComparator implements Comparator<String> {
+	public static class IgnoreHashComparator implements Comparator<String> {
 		public int compare(String a, String b) {
 			int alen = hashash(a) ? a.length() - 1 : a.length();
 			int blen = hashash(b) ? b.length() - 1 : b.length();
@@ -81,7 +81,8 @@ public class TwoStrings {
 		for (int i = 0; i < w.length(); i++) {
 			suff.add(w.substring(i));
 		}
-		suff.sort(new IgnoreHashComparator());
+		IgnoreHashComparator ig = new IgnoreHashComparator();
+		//suff.sort(ig);
 
 		for (int i = 1; i < w.length(); i++) {
 			String w1 = suff.get(i - 1);
