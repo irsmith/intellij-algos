@@ -1,8 +1,8 @@
-package org.skup.linkedList;
+package linkedList;
 
-import static org.skup.linkedList.LinkListUtil.print;
+import static linkedList.LinkListUtil.print;
 
-import org.skup.linkedList.LinkListUtil.Node;
+import linkedList.LinkListUtil.Node;
 
 public class RevLLIterative {
 	

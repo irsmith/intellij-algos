@@ -1,4 +1,4 @@
-package org.skup.linkedList;
+package linkedList;
 
 
 public class LinkListUtil {

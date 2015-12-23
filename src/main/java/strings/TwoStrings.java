@@ -1,4 +1,4 @@
-package org.skup.strings;
+package strings;
 
 import static org.junit.Assert.assertEquals;
 
@@ -57,7 +57,6 @@ public class TwoStrings {
 	}
 
 	static class IgnoreHashComparator implements Comparator<String> {
-		@Override
 		public int compare(String a, String b) {
 			int alen = hashash(a) ? a.length() - 1 : a.length();
 			int blen = hashash(b) ? b.length() - 1 : b.length();

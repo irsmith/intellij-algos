@@ -1,6 +1,6 @@
-package org.skup.linkedList;
+package linkedList;
 
-import org.skup.linkedList.LinkListUtil.Node;
+import linkedList.LinkListUtil.Node;
 
 public class ReverseLL {
 	Node h;

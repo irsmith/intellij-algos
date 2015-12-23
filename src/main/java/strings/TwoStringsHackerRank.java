@@ -1,6 +1,4 @@
-/**
- * Created by irene on 12/21/15.
- */
+package strings;
 
 import java.io.*;
         import java.util.*;
