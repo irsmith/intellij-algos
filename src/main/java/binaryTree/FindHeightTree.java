@@ -1,7 +1,6 @@
 package binaryTree;
 
 import binaryTree.BTUtil.Node;
-import static org.junit.Assert.*;
 
 public class FindHeightTree {
 	// A tree consisting of only a root node has a height of 0.
@@ -28,6 +27,10 @@ public class FindHeightTree {
 		n8.left = n5;
 		assertEquals(4, finder.getHeight(n23));
 
+	}
+
+	private static void assertEquals(int a, int b) {
+		if (a != b) throw new RuntimeException();
 	}
 
 	private int getHeight(Node cur) {
