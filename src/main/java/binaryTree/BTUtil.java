@@ -16,6 +16,12 @@ public  class BTUtil {
 			nxt = next;
 			val = v;
 		}
+		public Node(int v, Node left, Node right) {
+			this.val=v;
+  			this.left = left;
+			this.right=right;
+		}
+
 		@Override
 		public String toString() {
 			return String.valueOf(val);
