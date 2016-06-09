@@ -59,6 +59,7 @@ public class Solution {
             int sumOverN = 0;
             for (int c = 0; c < N; c++) {
                 a[c] = s.nextInt() % M;
+                //2≤Sum of N over all test cases≤500000
                 if (a[c] > M) {
                     System.out.format("lllleeess a[c]:%d c:%d",a[c],c);
                     System.exit(1);
@@ -70,13 +71,8 @@ public class Solution {
                 }
 
             }
-            //2≤Sum of N over all test cases≤500000
-            //System.out.println(sumOverN);
-
-
             System.out.println(dp());
         }
-
     }
 
     // A subarr is uniquely identifed by ending at and its length
@@ -99,12 +95,10 @@ public class Solution {
                     }
 
                 }
-                //if (DP[subaLength][subArrStart] == M-1) return DP[subaLength][subArrStart]; 
+                if (DP[subaLength][subArrStart] == M-1) return DP[subaLength][subArrStart];
                 max = Math.max(max, DP[subaLength][subArrStart]);
             }
-
             truncate++;
-
         }
         return max;
     }
