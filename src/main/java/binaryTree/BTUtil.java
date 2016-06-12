@@ -8,7 +8,12 @@ public  class BTUtil {
 		Node right;
 		int val;
         Node nxt;
-        
+		public Node(int v, Node left, Node right) {
+			this.left=left;
+			this.right=right;
+			val = v;
+		}
+
 		Node(int v) {
 			val = v;
 		}
@@ -16,11 +21,7 @@ public  class BTUtil {
 			nxt = next;
 			val = v;
 		}
-		public Node(int v, Node left, Node right) {
-			this.val=v;
-  			this.left = left;
-			this.right=right;
-		}
+
 
 		@Override
 		public String toString() {
