@@ -43,7 +43,7 @@ needs to be their sum THUS Target changes with each decision. The decision can b
 (usually the recursive top down soln) or iterative (bottom up).
 When we candidate and acceptedCandidate, we are reducing the TARGET and since its number of ways,
 we need to SUM the solution WITH AND WITHOUT the acceptedCandidate.
-So the SET SIZE is changing each time. 
+So the princeton.SET SIZE is changing each time.
 
 2b) list all sets for making change
 

@@ -1,6 +1,21 @@
-package org.skup.dp;
+package dp.coinsNbrWays;
 
 import static org.junit.Assert.assertEquals;
+/**
+ *
+ http://www.algorithmist.com/index.php/Coin_Change
+
+ def count( n, m ):
+ if n < 0 or m <= 0: #m < 0 for zero indexed programming languages
+ return 0
+ if n == 0: # needs be checked after n & m, as if n = 0 and m < 0 then it would return 1, which should not be the case.
+ return 1
+
+ return count( n, m - 1 ) + count( n - S[m], m )
+
+
+
+ */
 
 /**
  * http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/

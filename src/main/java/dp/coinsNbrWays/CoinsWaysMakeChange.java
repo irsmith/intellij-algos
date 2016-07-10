@@ -1,4 +1,4 @@
-package org.skup.dp;
+package dp.coinsNbrWays;
 import static org.junit.Assert.assertEquals;
 
 public class CoinsWaysMakeChange {

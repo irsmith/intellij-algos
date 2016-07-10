@@ -1,4 +1,4 @@
-package dp;
+package dp.coinsNbrWays;
 
 /**
  * Created by issmith1 on 5/18/16.

@@ -1,4 +1,4 @@
-package org.skup.dp;
+package dp;
 
 import java.awt.Point;
 import java.util.Arrays;

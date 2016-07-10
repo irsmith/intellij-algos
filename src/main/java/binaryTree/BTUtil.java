@@ -112,7 +112,7 @@ public  class BTUtil {
 		System.out.println(bst.levelOrder());
 
 		// int[] a = new int[] {5,3,8,2,0,5,4,4};
-		// BST bst = new BST(a);
+		// princeton.BST bst = new princeton.BST(a);
 		// Node r = bst.getRoot();
 		// System.out.println(bst);
 
