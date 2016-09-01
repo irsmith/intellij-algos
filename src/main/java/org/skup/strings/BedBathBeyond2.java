@@ -1,3 +1,4 @@
+package org.skup.strings;
 import com.sun.tools.javac.util.Assert;
 
 import java.util.Set;
@@ -8,13 +9,11 @@ public class BedBathBeyond2 {
     /*
      given dicitonary of words and a string, can you split string such
      that all words are in dict?
-
      */
     public static void main(String[] args) {
         Set<String> dict = new HashSet<String>();
         for (String w: new String[]
-        { "apple", "banana", "cactus", "fig",
-                "guava", "pear", "tomato", "Bed", "Bath", "Beyond" }) {
+                { "apple", "banana", "cactus", "fig", "guava", "pear", "tomato", "Bed", "Bath", "Beyond" }) {
             dict.add(w );
         }
 
