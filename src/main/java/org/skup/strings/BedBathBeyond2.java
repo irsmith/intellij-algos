@@ -1,8 +1,11 @@
 package org.skup.strings;
 import com.sun.tools.javac.util.Assert;
+import com.sun.tools.javac.util.StringUtils;
 
 import java.util.Set;
 import java.util.HashSet;
+
+import static org.junit.Assert.assertTrue;
 
 public class BedBathBeyond2 {
 
@@ -17,15 +20,39 @@ public class BedBathBeyond2 {
             dict.add(w );
         }
 
-        //0123456789012
+        assertTrue(f2(dict, "", "BedBathBeyond"));
+        org.junit.Assert.assertFalse(f2(dict, "","BedxBathBeyond"));
 
-//        System.out.println(f(dict, "BedBathBeyond", 0, 0));
-        System.out.println(f(dict, "BedxBathBeyond", 0, 0));
+        assertTrue(f2(dict, "","BedBathBeyond"));
+        org.junit.Assert.assertFalse(f2(dict, "","BedxBathBeyond"));
+                                           // 0123456789 123
+    }
+
+    private static boolean f2(Set<String> dict, String cand, String r) {
+
+        if (r.isEmpty()) {
+            return (dict.contains(cand)) ? true : false;
+        } else {
+            if (dict.contains(cand)) {
+                return f2(dict, "", r);
+
+            } else {
+                return f2(dict, cand+r.substring(0,1),
+                        (r.length()==1)? "": r.substring(1));
+            }
+        }
 
     }
 
-    private static boolean f(Set<String> dict, String word, int lo, int hi) {
-        System.out.format("-->%d %d %n", lo, hi);
+    /**
+     * much better do in place w pointers. Not tearing up strings, can easily handle corner cases.
+     * @param dict
+     * @param word
+     * @param lo
+     * @param hi
+     * @return
+     */
+    private static boolean f3(Set<String> dict, String word, int lo, int hi) {
 
         if (hi >=word.length()) return true;
         if (lo > hi) {
@@ -34,13 +61,13 @@ public class BedBathBeyond2 {
 
 
         String candidate=word.substring(lo,hi);
-        System.out.format("--%s %d %d %n", candidate, lo, hi);
+        System.out.format("candidate:%s lo:%d hi:%d %n",candidate, lo, hi);
         if (dict.contains(candidate)) {
             lo = hi;
-            return f(dict, word, lo, hi);
+            return f3(dict, word, lo, hi);
         }
 
-        return f(dict, word, lo, hi+1);
+        return f3(dict, word, lo, hi+1);
     }
 
 
