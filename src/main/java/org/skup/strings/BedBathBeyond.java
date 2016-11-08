@@ -28,6 +28,7 @@ public class BedBathBeyond {
 
 	}
 
+
 	static int rank(String[] a, String s) {
 
 		return rank_h(a, s, 0, a.length - 1);
@@ -55,16 +56,19 @@ public class BedBathBeyond {
 
 	public static void main(String[] args) {
 		String[] a2 = { "apple", "banana", "cactus", "fig", "guava", "pear", "tomato", "Bed", "Bath", "Beyond" };
-		String[] a = { "Bed", "Bath", "Beyond" };
 
 		Assert.assertFalse(hasall(a2,"") );
 		Assert.assertFalse(hasall(a2,null) );
-
 		Assert.assertTrue(hasall(a2,"BedBathBeyond") );
 		Assert.assertFalse(hasall(a2,"BedxBathBeyond") );
 		Assert.assertTrue(hasall(a2,"cactuscactuscactus") );
 
-        System.exit(0);
+		String[] a = { "Bed", "Bath", "Beyond" };
+		Assert.assertTrue(hasall(a,"BedBathBeyond") );
+		Assert.assertFalse(hasall(a,"BedxBathBeyond") );
+		Assert.assertFalse(hasall(a,"cactuscactuscactus") );
+
+		System.exit(0);
 		Assert.assertTrue("cactus".compareTo("fig") < 0);
 		Assert.assertTrue("fig".compareTo("cactus") > 0);
 

@@ -1,5 +1,4 @@
-package org.skup.array;
-
+package array;
 import java.util.Arrays;
 
 /*
@@ -13,6 +12,8 @@ import java.util.Arrays;
 
 public class FillHighestToRight {
 	public static void main(String[] args) {
+		int x = 5/3;
+		System.out.println(x);
 		Integer a[] = { 0, 1, 2, 3, 7, 0, 0, 4, 0, 1 };
 		System.out.println(Arrays.asList(a));
 

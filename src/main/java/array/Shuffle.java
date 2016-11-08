@@ -11,21 +11,22 @@ public class Shuffle {//e the Fisher–Yates shuffle:
 
     public static void main(String[] args) {
         // equally likely
-        int a[] = {0, 1, 2, 3, 4, 5};
+        Integer a[] = {1, 2, 3, 4, 5};
 
-
-        System.out.println(Arrays.asList(shuffleInPlace(a)));
+        for (int k=0;k<10;k++) {
+            System.out.println(Arrays.asList(shuffleInPlace(a)));
+        }
     }
-    public static int[] shuffleInPlace(int[] a){
+    public static Integer[] shuffleInPlace(Integer[] a){
         Random r = new Random();
 
         for (int i = a.length - 1; i > 0; i--) {
-            int idx = r.nextInt(i);
+            int idx = r.nextInt(i+1); //gotcha for java
             swap(a, i, idx);
         }
         return a;
     }
-    private static void swap(int[] a, int i, int j) {
+    private static void swap(Integer[] a, int i, int j) {
         int tmp = a[i];
         a[i] = a[j];
         a[j] = tmp;

@@ -1,4 +1,4 @@
-package org.skup.array;
+package array;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ public class FindKthSmallest2 {
 		Integer b[] = { 11, 0, -1, 0, 1, 21, 13, 31, 0, -2 };
 		Integer c[] = { 11, 0};
 
-		Integer[] r = smal(c, 4);
+		Integer[] r = smal(a, 4);
 		System.out.println(Arrays.asList(r));
 	}
 
@@ -31,6 +31,9 @@ public class FindKthSmallest2 {
 				pv = partition(a, lo, pv - 1);
 			}
 		}
+		Integer[] below = pkg(a, K-1);
+
+		System.out.format("below: %s a[K]:%d %n", Arrays.asList(below),a[K]);
 		return pkg(a, K-1);
 	}
 

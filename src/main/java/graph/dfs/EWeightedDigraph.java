@@ -1,11 +1,5 @@
 package graph.dfs;
 
-import edu.princeton.cs.algs4.Edge;
-import edu.princeton.cs.algs4.EdgeWeightedDigraph;
-import edu.princeton.cs.algs4.Graph;
-import edu.princeton.cs.algs4.In;
-
-import java.util.PriorityQueue;
 
 /**
  * Created by irene on 6/19/16.
