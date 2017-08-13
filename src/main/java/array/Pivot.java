@@ -6,7 +6,7 @@ import java.util.Random;
  * given int[] print each w/out repeating
  * Time complexity O(n)
  */
-public class PrintWithoutRepeat{
+public class Pivot {
 	static Random rnd = new Random();
 
 	public static void main(String[] args) {

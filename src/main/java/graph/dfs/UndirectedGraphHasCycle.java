@@ -18,8 +18,9 @@ public class UndirectedGraphHasCycle {
 
     public static void main(String[] args) {
         G = new ArrayList<>();
-        //gCycle();
-        g_noCycle();
+        // make the data
+        gCycle();
+        //g_noCycle();
 
         V=G.size();
         marked = new boolean[V];
@@ -63,7 +64,7 @@ public class UndirectedGraphHasCycle {
             if (!marked[w]) {
                 dfs(w, v);
             }  else {
-                if (w != u)
+                if (w != u)  // ignore the "parellel" edge
                     hasCycle = true;
             }
         }

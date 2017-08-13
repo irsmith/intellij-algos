@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * has cycle digraph
  */
-public class HasCycle {
+public class DigraphHasCycle {
 
     static int V;
     static final int GREY = -1;
