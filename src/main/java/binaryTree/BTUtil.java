@@ -8,6 +8,7 @@ public  class BTUtil {
 		Node right;
 		int val;
         Node nxt;
+
 		public Node(int v, Node left, Node right) {
 			this.left=left;
 			this.right=right;
@@ -17,6 +18,7 @@ public  class BTUtil {
 		Node(int v) {
 			val = v;
 		}
+
 		public Node(int v, Node next) {
 			nxt = next;
 			val = v;
@@ -32,7 +34,7 @@ public  class BTUtil {
 	Node root = null;
 
 	public BTUtil(int[] a) {
-		// if you want balanced, shuffle it
+		// if you want balanced, sort it
 		// Arrays.sort(a);
 		root = null;
 		for (int i = 0; i < a.length; i++) {
@@ -57,9 +59,7 @@ public  class BTUtil {
 		}
 	}
 
-	// visualize newing from top down. Look for where it goes (either l or r of
-	// n) then
-	// insert it on its left side or insert it on its right side
+	// Insert a new node v to root n to BT.  If v < N.val  recursively ask insert() to insert v under the left node.
 	private Node insert(int v, Node n) {
 
 		// find where v should go then insert it
@@ -75,6 +75,7 @@ public  class BTUtil {
 		return n;
 	}
 
+	/** Inorder */
 	@Override
 	public String toString() {
 		return inorder(root);
@@ -96,8 +97,8 @@ public  class BTUtil {
 			Node n = ll.remove(0); // not get! remove!
 			if (n == null)
 				continue;
-			rv.add(n.val);
-			ll.add(n.left);
+			rv.add(n.val); // visit
+			ll.add(n.left); // add children
 			ll.add(n.right);
 		}
 		return rv.toString();
@@ -108,7 +109,7 @@ public  class BTUtil {
 		int[] a = new int[] { 5, 3, 8, 2, 0, 5, 4, 4, 9, 10, 11, 12, 13, 14 };
 		BTUtil bst = new BTUtil(a);
 		Node r = bst.getRoot();
-		System.out.println(bst);
+		System.out.println(bst);  // prints in orderc
 		System.out.println(bst.levelOrder());
 
 		// int[] a = new int[] {5,3,8,2,0,5,4,4};

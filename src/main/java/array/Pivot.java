@@ -1,5 +1,6 @@
 package array;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -13,6 +14,8 @@ public class Pivot {
 		int a[] = { 4, 3, 9, 78, 24, 5, 0, 77 };
 
 		pv(a, 0, a.length - 1);
+
+		System.out.println(Arrays.toString(a));
 
 	}
 
