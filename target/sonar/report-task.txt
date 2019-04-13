@@ -1,0 +1,7 @@
+organization=issmith1-github
+projectKey=issmith1_tcl4
+serverUrl=https://sonarcloud.io
+serverVersion=7.7.0.23020
+dashboardUrl=https://sonarcloud.io/dashboard?id=issmith1_tcl4
+ceTaskId=AWnGLjF8EAx-M9AqMjzB
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWnGLjF8EAx-M9AqMjzB

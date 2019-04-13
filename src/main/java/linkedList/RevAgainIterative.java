@@ -1,11 +1,10 @@
 package linkedList;
 import static linkedList.LinkListUtil.*;
 
-public class RevAgain {
+public class RevAgainIterative {
     public static void main(String[] args) {
         Node c = new Node('C', null);
         Node b = new Node('B', c);
-
         Node a = new Node('A', b);
         LinkListUtil.print(a);
 
@@ -15,16 +14,16 @@ public class RevAgain {
     }
     static Node rev(Node head){
         Node cur = head;
-        Node prev = null;
+        Node NL = null;
         while (cur != null) {
 
             Node temp = cur.nxt;
             // one operation! then increment both pointers with caveat that we need a temp.
-            cur.nxt = prev;
+            cur.nxt = NL;
 
-            prev = cur;
+            NL = cur;
             cur = temp;
         }
-        return prev;
+        return NL;
     }
 }

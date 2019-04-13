@@ -8,12 +8,12 @@ import linkedList.LinkListUtil.Node;
 /**
  * (this is the approach in The Little Lisper):
  http://stackoverflow.com/questions/354875/reversing-a-linked-list-in-java-recursively
-  What is the reverse of null (the empty list)? null.
+ What is the reverse of null (the empty list)? null.
  What is the reverse of a one element list? the element.
  What is the reverse of an n element list? the reverse of the second element on followed by the first element.
  *
  */
-public class RevLL {
+public class RevLLRecursive {
 
 	private static Node rev(Node prev, Node cur, Node newHead) {
 

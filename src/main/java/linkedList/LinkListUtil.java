@@ -8,10 +8,15 @@ public class LinkListUtil {
 	public static class Node {
 		public char v;
 		public Node nxt;
+        public Node prev;
 
 		public Node(char v, Node nxt) {
 			this.v = v;
 			this.nxt = nxt;
+		}
+
+		public Node() {
+
 		}
 
 		@Override

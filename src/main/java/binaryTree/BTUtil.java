@@ -5,9 +5,10 @@ import java.util.List;
 public  class BTUtil {
 	public static class Node {
 		Node left;
-		Node right;
+		public Node right;
 		int val;
         Node nxt;
+		public Node down;
 
 		public Node(int v, Node left, Node right) {
 			this.left=left;
