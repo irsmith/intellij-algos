@@ -16,15 +16,17 @@ public class ListToArray {
         // instantiate List in one line
         List<Integer> e = Arrays.asList(1,2);
 
-        // convert List e to a[] where new arr[] NOT primitive
+        // convert List e to a[] where arr is an Object
         Integer[] arr = e.toArray(new Integer[e.size()]);
         System.out.println(arr); //emit [Ljava.lang.Integer;@5451c3a8
         System.out.println(Arrays.asList(arr)); // [1. 2]
         //NOTE !  Integer[] arr = e.toArray(); // imcompat types, require Integer[] found Object[]
 
-        // convert List e to a[] where arr[] is primitive -- notthing is built into java!
+        // convert List e to a[] where arr[] is primitive --
         int[] array = new int[e.size()];
-        for(int i = 0; i < e.size(); i++) array[i] = e.get(i);
+        for(int i = 0; i < e.size(); i++) {
+            array[i] = e.get(i);
+        }
         System.out.println(Arrays.asList(array)); // [[I@2626b418]
 
         // sublist
