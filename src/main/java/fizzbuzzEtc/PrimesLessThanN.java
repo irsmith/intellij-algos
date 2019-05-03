@@ -25,7 +25,15 @@ public class PrimesLessThanN {
 		prime(100); // nominal
 
 	}
-
+/**
+ * Prime factorization - why is it hard?
+ * Prime factorization is a one-way function.
+ * The existing algorithms are not sufficient to solve the problem in polynomial time.
+ * https://www.quora.com/Why-is-factoring-numbers-into-primes-a-difficult-problem
+ *
+ * A composite number of prime factors is whereby N = prime*prime*...
+ * A semi-prime is 2 primes P whereby P1*P2 = another prime. P1/P2 cannot be close together - think of it as about half.
+ */
 
 
 	/**
