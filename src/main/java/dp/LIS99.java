@@ -10,7 +10,7 @@ public class LIS99 {
      https://stackoverflow.com/questions/6129682/longest-increasing-subsequenceonlogn
      */
     static int osq(){
-        int dp[] = new int[val.length];
+        int dp[] = new int[val.length]; //  length of the subarray ending at i
         dp[0]=1;
         int globMax = 0;
         for (int i=0 ; i<val.length; i++) {

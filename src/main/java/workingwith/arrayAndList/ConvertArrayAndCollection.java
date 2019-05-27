@@ -1,3 +1,5 @@
+package workingwith.arrayAndList;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -14,6 +16,10 @@ public class ConvertArrayAndCollection {
         // Java8 Streams API
 		int[] primitivearr = { 1, 2, 3 };
         List<Integer> arrViaStreamsAPI = Arrays.stream(primitivearr).boxed().collect(Collectors.toList());
+
+        // sort primitive array
+        Arrays.sort(primitivearr);  //sorts in place
+        System.out.println(Arrays.toString(primitivearr));
 
         // You can’t use the popular Arrays.asList to convert it directly, because boxing issue.
 		//List<Integer> newArr = list.toArray(new Integer[arr.length]);

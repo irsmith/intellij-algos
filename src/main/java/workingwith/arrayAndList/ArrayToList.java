@@ -3,6 +3,7 @@ package workingwith.arrayAndList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 //import java.util.stream.Collectors;
 
 /**
@@ -19,7 +20,7 @@ public class ArrayToList {
         System.out.println(Arrays.asList(2,3,5)); // emits [2, 3, 5]
         Integer a2[] = {0,1,2,3,4};
         System.out.println(a2); // emits [Ljava.lang.Integer;@5451c3a8
-        // List<Integer> l2 =Arrays.asList(a); violates generics
+        // List<Integer> l2 =Arrays.asList(a); violates generics / boxing
         System.out.println( Arrays.asList(a2)); // emits [0, 1, 2, 3, 4]
 
 
@@ -48,18 +49,20 @@ public class ArrayToList {
     }
 
     private static void primitive() {
-//        // ----- primitive arr -------------------
-//        int a[] = {0,1,2,3,4};
-//
-//        // jave8 primitive to list uses boxed()
-//        int[] spam = new int[] { 1, 2, 3 };
-//        List<Integer> list11 = Arrays.stream(spam)
-//                .boxed()
-//                .collect(Collectors.toList());
-//        System.out.println(list11); //emists [1,2,3]
-//
-//        // subarray of primitives
-//        int [] subarray = Arrays.copyOfRange(spam, 1,2);
-//        System.out.println(subarray);  //[I@7cd84586
+        // ----- primitive arr -------------------
+        int a[] = {0,1,2,3,4};
+
+        // sort primitive array in place
+        Arrays.sort(a);
+        // jave8 primitive to list uses boxed()
+        int[] spam = new int[] { 1, 2, 3 };
+        List<Integer> list11 = Arrays.stream(spam)
+                .boxed()
+                .collect(Collectors.toList());
+        System.out.println(list11); //emists [1,2,3]
+
+        // subarray of primitives
+        int [] subarray = Arrays.copyOfRange(spam, 1,2);
+        System.out.println(subarray);  //[I@7cd84586
     }
 }
