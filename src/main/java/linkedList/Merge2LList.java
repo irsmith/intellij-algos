@@ -1,10 +1,5 @@
 package linkedList;
 
-import linkedList.LinkListUtil;
-
-import static linkedList.LinkListUtil.print;
-import static linkedList.LinkListUtil.Node;
-
 /*
  * need to keep it simple, yest handle complexity of first pointer
  * could be null or one list is exhausted
@@ -25,22 +20,22 @@ public class Merge2LList {
         LinkListUtil.Node c = new LinkListUtil.Node('c', e);
         LinkListUtil.Node a = new LinkListUtil.Node('a', c);
 
-        Node lista = a;
-        Node listb = b;
+        LinkListUtil.Node lista = a;
+        LinkListUtil.Node listb = b;
 
 
-        print(lista);
-        print(listb);
+        LinkListUtil.print(lista);
+        LinkListUtil.print(listb);
 
         LinkListUtil.Node newh=merge(lista, listb);
-        print(newh);
+        LinkListUtil.print(newh);
     }
 
-    private static LinkListUtil.Node merge(Node alist, Node blist) {
-        Node result = new Node('0',null);
-        Node res = result;
-        Node a = alist;
-        Node b = blist;
+    private static LinkListUtil.Node merge(LinkListUtil.Node alist, LinkListUtil.Node blist) {
+        LinkListUtil.Node result = new LinkListUtil.Node('0',null);
+        LinkListUtil.Node res = result;
+        LinkListUtil.Node a = alist;
+        LinkListUtil.Node b = blist;
 
         //while (!(aexhaust && bexhast)) {
 

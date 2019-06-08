@@ -13,7 +13,7 @@ package linkedList;
  Explanation: 342 + 465 = 807.
  */
 
-public class SumRedo {
+public class TwoSumLeet {
 
     public static class ListNode {
         int val;
@@ -21,13 +21,12 @@ public class SumRedo {
         ListNode(int x) { val = x; }
     }
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode answ = null;
+        ListNode answ = new ListNode(Integer.MAX_VALUE);//dummy
+        ListNode answEnd = answ;
         int carry = 0;
         ListNode cur1 = l1;
         ListNode cur2 = l2;
-        ListNode endAnsw = null;
-
-        int v1, v2;
+        int v1=0, v2=0;
         while (!(cur1==null && cur2==null)) {
             if (cur1 == null) {
                 //increment only cur2 and set v1 to zero
@@ -41,7 +40,6 @@ public class SumRedo {
                 v2 = 0;
 
             } else {
-                // inc both
                 v1 = cur1.val;
                 cur1 = cur1.next;
                 v2 = cur2.val;
@@ -51,27 +49,52 @@ public class SumRedo {
             int localSum = v1 + v2 + carry;
             carry = localSum / 10;
             localSum = localSum % 10;
+
+            // insert answer at END of answer
+
             ListNode newnode = new ListNode(localSum);
-            if (answ == null) {
-                answ = newnode;
-                endAnsw = newnode;
-            } else {
-                endAnsw.next=newnode;
-                endAnsw = newnode;
-            }
+              //            if (answ == null) {  // we can use the dummy pattern and return answ.next
+              //                answ = newnode;
+              //                answEnd = newnode;
+              //            } else {
+              answEnd.next = newnode;
+              answEnd = newnode;
         }
-        return answ;
+        if (carry == 1) {
+            // add one to end of answer list
+            ListNode newnode = new ListNode(carry);
+            answEnd.next = newnode;
+        }
+        return answ.next;
     }
     /**
-     * Definition for singly-linked list.
+     * LEARNED: their example will omit edge cases.  Hint is that both m and N len are SAME.  Thus need case of diff.
+     *
+     Definition for singly-linked list.
      Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
      Output: 7 -> 0 -> 8
      Explanation: 342 + 465 = 807.
+
+     Input: (6) + (7 )
+     Output: 3 -> 1
+     since: 6 + 7 = 13
+
+     Input: (6 -> 2)  + (8)
+     Output: 4 -> 3
+     r: 26 + 8 =  34
      */
     public static void main(String a[]){
-        SumRedo s = new SumRedo();
+        TwoSumLeet s = new TwoSumLeet();
         ListNode b0=new ListNode(5);
-        ListNode a0=new ListNode(5);
+        ListNode b1=new ListNode(6);
+        ListNode b2=new ListNode(4);
+        ListNode a0=new ListNode(2);
+        ListNode a1=new ListNode(4);
+        ListNode a2=new ListNode(3);
+        a0.next=a1;
+        a1.next=a2;
+        b0.next=b1;
+        b1.next=b2;
 
         final ListNode answ = s.addTwoNumbers(a0, b0);
 

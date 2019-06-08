@@ -1,5 +1,6 @@
 package cache;
 
+import linkedList.LinkListUtil;
 import org.junit.Assert;
 
 import java.util.HashMap;
@@ -95,15 +96,15 @@ public class LRUCache {
 
         cache.put(1,'a');
         Assert.assertEquals(1, cache.size);
-        linkedList.LinkListUtil.print(cache.head);
+        LinkListUtil.print(cache.head);
 
         cache.put(2,'b');
         Assert.assertEquals(2, cache.size);
-        linkedList.LinkListUtil.print(cache.head);
+        LinkListUtil.print(cache.head);
 
         cache.put(3,'c');
         Assert.assertEquals(3, cache.size);
-        linkedList.LinkListUtil.print(cache.head);
+        LinkListUtil.print(cache.head);
 
 
     }

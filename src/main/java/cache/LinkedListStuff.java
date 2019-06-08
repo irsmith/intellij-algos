@@ -2,12 +2,6 @@ package cache;
 
 import linkedList.LinkListUtil;
 
-import java.util.Map;
-
-import org.junit.Assert;
-
-import java.util.HashMap;
-import java.util.Map;
 import linkedList.LinkListUtil.*;
 
 public class LinkedListStuff {
@@ -25,10 +19,10 @@ public class LinkedListStuff {
         Node nb = new Node('b',nc);
         cache.head = new Node('a',nb);
 
-        linkedList.LinkListUtil.print(cache.head);
+        LinkListUtil.print(cache.head);
 
         Node r = cache.reverse();
-        linkedList.LinkListUtil.print(r);
+        LinkListUtil.print(r);
 
     }
 
